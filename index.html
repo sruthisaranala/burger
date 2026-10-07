@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" integrity="sha384-Bk5cbLkZQ5raZ0+H2/+VbfYx3WpvxvQK4zqXZr7sYODuaX7bKXoSOnipQxkaS8sv" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .navbar-brand {
+            color: #f5b400 !important;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: white;
+            font-weight: 500;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f5b400;
+        }
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.55)
+                ),
+                url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 {
+            font-size: 70px;
+        }
+        .food-img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+        .about-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        .special-banner {
+            min-height: 400px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.6),
+                    rgba(0,0,0,0.6)
+                ),
+                url("https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 55px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 550px;
+            }
+            .hero h1 {
+                font-size: 42px;
+            }
+            .about-img {
+                height: 350px;
+            }
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 34px;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark py-3">
+    <div class="container">
+        <a class="navbar-brand" href="#">BURGER HOUSE</a>
+        <ul class="navbar-nav flex-row flex-wrap gap-3 ms-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#offers">OFFERS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#menu">MENU</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-cart3 text-white fs-5"></i>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section id="home"class="hero d-flex align-items-center text-center text-white">
+    <div class="container">
+        <p class="yellow fw-bold text-uppercase">Fresh & Delicious</p>
+        <h1 class="fw-bold text-uppercase">BURGER<br>CRISPY & TENDER</h1>
+        <p class="lead">Delicious burgers made with fresh ingredients specially prepared for our food lovers.</p>
+        <button class="btn btn-danger p-3 w-150 fw-bold">SEE MORE</button>
+    </div>
+</section>
+<section id="about" class="py-5">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <p class="yellow fw-bold text-uppercase">About Us</p>
+                <h2 class="display-5 fw-bold">Delivering the best ingredients for our food lovers</h2>
+                <p class="text-secondary mt-4">We believe that great food starts with great ingredients. Our burgers are made with fresh vegetables, premium meat and delicious sauces.</p>
+                <p class="text-secondary">Every meal is freshly prepared and served with care to give our customers the best experience.</p>
+                <a href="#menu"class="btn bg-warning fw-bold px-4">LEARN MORE</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://jevelin.shufflehound.com/burger-shop/wp-content/uploads/sites/44/2020/09/food-photographer-david-fedulov-W1Yi4z375L0-unsplash.jpg" class="about-img rounded"alt="Burger">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="offers"class="bg-light py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <p class="yellow fw-bold text-uppercase">Special Offers</p>
+            <h2 class="display-5 fw-bold">Our Special Deals</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://jevelin.shufflehound.com/burger-shop/wp-content/uploads/sites/44/2020/09/Hue_Saturation-679.jpg" class="food-img card-img-top" alt="Sandwich">
+                    <div class="card-body text-center">
+                        <h3 class="fw-bold">Ham Sandwich</h3>
+                        <p class="text-secondary">Fresh bread, delicious ham and fresh vegetables.</p>
+                        <h4 class="yellow fw-bold">$14</h4>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6"> 
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Beef Burger">
+                    <div class="card-body text-center">
+                        <h3 class="fw-bold">Juicy Beef Burger</h3>
+                        <p class="text-secondary">Juicy beef burger served with crispy fries.</p>
+                        <h4 class="yellow fw-bold">$16</h4>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Milkshake">
+                    <div class="card-body text-center">
+                        <h3 class="fw-bold">Chocolate Milkshake</h3>
+                        <p class="text-secondary">Creamy and delicious chocolate milkshake.</p>
+                        <h4 class="yellow fw-bold">$8</h4>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="special-banner d-flex align-items-center text-center text-white">
+    <div class="container">
+        <span class="badge bg-yellow text-danger fs-6 px-3 py-2">25% OFF</span>
+        <h2 class="display-4 fw-bold mt-3">Enjoy Our Special Burgers</h2>
+        <p class="lead">Don't miss out on our daily special offers.</p>
+        <a href="#menu" class="btn btn-light fw-bold px-5 py-3">SEE MENU</a>
+    </div>
+</section>
+<section id="menu" class="py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <p class="yellow fw-bold text-uppercase">Our Menu</p>
+            <h2 class="display-5 fw-bold">Trending Burgers</h2>
+        </div>
+        <div class="row g-4">
+             <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Classic Burger">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Classic Burger</h4>
+                        <p class="text-secondary">Fresh vegetables,cheese and beef.</p>
+                        <h5 class="yellow fw-bold">$8</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://jevelin.shufflehound.com/burger-shop/wp-content/uploads/sites/44/2020/09/burger4.jpg" class="food-img card-img-top" alt="Cheese Burger">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Cheese Burger</h4>
+                        <p class="text-secondary">Juicy beef with melted cheese.</p>
+                        <h5 class="yellow fw-bold">$9</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Double Burger">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Double Burger</h4>
+                        <p class="text-secondary">Double patty with cheese and sauce.</p>
+                        <h5 class="yellow fw-bold">$11</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Chicken Burger">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Crispy Chicken</h4>
+                        <p class="text-secondary">Crispy chicken with fresh vegetables.</p>
+                        <h5 class="yellow fw-bold">$10</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <p class="yellow fw-bold text-uppercase">Sweet Treats</p>
+            <h2 class="display-5 fw-bold">Dessert Menu</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Cake">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Strawberry Cake</h4>
+                        <p class="text-secondary">Fresh strawberry dessert.</p>
+                        <h5 class="yellow fw-bold">$8</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0">
+                    <img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Chocolate Dessert">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Chocolate Dessert</h4>
+                        <p class="text-secondary">Rich chocolate dessert.</p>
+                        <h5 class="yellow fw-bold">$8</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Apple Pie">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Apple Pie</h4>
+                        <p class="text-secondary">Freshly prepared apple pie.</p>
+                        <h5 class="yellow fw-bold">$7</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" class="food-img card-img-top" alt="Waffle">
+                    <div class="card-body text-center">
+                        <h4 class="fw-bold">Sunday Waffle</h4>
+                        <p class="text-secondary">Crispy sweet waffle.</p>
+                        <h5 class="yellow fw-bold">$6</h5>
+                        <button class="btn btn-dark">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <p class="yellow fw-bold text-uppercase">Testimonials</p>
+            <h2 class="display-5 fw-bold">What Our Clients Say</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light p-4 h-100 text-center">
+                    <i class="bi bi-quote yellow fs-1"></i>
+                    <p class="text-secondary">Amazing burgers and excellent service. The food was fresh and delicious.</p>
+                    <h5 class="fw-bold">John Doe</h5>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light p-4 h-100 text-center">
+                    <i class="bi bi-quote yellow fs-1"></i>
+                    <p class="text-secondary">
+                        One of the best burger places I have ever visited.</p>
+                    <h5 class="fw-bold">Jane Doe</h5>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light p-4 h-100 text-center">
+                    <i class="bi bi-quote yellow fs-1"></i>
+                    <p class="text-secondary">Great taste, fresh ingredients and affordable prices.</p>
+                    <h5 class="fw-bold">Alex Smith</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="gallery-grid">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Burger">
+        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80" alt="Burger">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Burger">
+        <img src="https://jevelin.shufflehound.com/burger-shop/wp-content/uploads/sites/44/2020/09/insta1.jpg" alt="Burger">
+    </div>
+</section>
+<footer id="contact" class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <h3 class="yellow fw-bold">BURGER HOUSE</h3>
+                <p class="text-secondary">Fresh burgers, tasty sides and delicious desserts prepared specially for you.</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold">QUICK LINKS</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="#home"class="text-secondary text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#about"class="text-secondary text-decoration-none">About</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#offers"class="text-secondary text-decoration-none">Offers</a>
+                    </li>
+                    <li>
+                        <a href="#menu"class="text-secondary text-decoration-none">Menu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="fw-bold">CONTACT</h5>
+                <p class="text-secondary"><i class="bi bi-telephone"></i>+91 98765 43210</p>
+                <p class="text-secondary"><i class="bi bi-envelope"></i>burgerhouse@gmail.com</p>
+                <p class="text-secondary"><i class="bi bi-geo-alt"></i>Vijayawada, India</p>
+            </div>
+        </div>
+        <hr class="border-secondary">
+        <p class="text-center text-secondary mb-0">© 2026 Burger House.All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
